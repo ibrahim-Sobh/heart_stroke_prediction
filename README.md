@@ -1,5 +1,3 @@
-# hear stroke prediciton Repo
-
 # Strokes and Heart Failure Predictions Model
 
 ## Users :
