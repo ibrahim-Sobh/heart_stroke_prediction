@@ -1,0 +1,12 @@
+
+pandas==1.4.2
+jupyter==1.0.0
+numpy==1.22.3
+streamlit==1.8.1
+fastapi==0.75.2
+uvicorn==0.17.6
+stroke-pred-p0w11==0.1
+scikit-learn==1.0.2
+psycopg2==2.9.3
+python-dotenv==0.20.0
+sqlalchemy==1.4.36

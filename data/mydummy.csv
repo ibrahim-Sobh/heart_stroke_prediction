@@ -1,0 +1,4 @@
+id,firstname,lastname,gender,age,hypertension,heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status
+28258,Harold,Cole,Female,80.0,0,0,Yes,Self-employed,Urban,75.06,29.7,Unknown
+35759,Ola,Rodriquez,Female,16.0,0,0,No,Private,Rural,92.77,24.9,Unknown
+18134,Polly,Kennedy,Male,10.0,0,0,No,children,Rural,95.8,17.3,Unknown

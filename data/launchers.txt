@@ -1,0 +1,12 @@
+# Fast API
+ cd stroke_api;
+ uvicorn  main:app --reload  --host 0.0.0.0 --port 8005;
+ uvicorn  main:app --host 0.0.0.0 --port 8005;  
+
+# Streamlit
+
+streamlit run web_interface.py --server.port 8010;
+
+
+# Flake8 / auto pep
+# for f in `find . -name "*.py"`; do autopep8 --in-place --select=000 $f; done
