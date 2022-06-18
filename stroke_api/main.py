@@ -9,7 +9,6 @@ from stroke_prediction.inference import make_prediction
 
 #FastAPI
 from fastapi import FastAPI
-from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from typing import Optional
 from json import dumps
@@ -157,13 +156,29 @@ async def predict_file(record:Record,patient: List[Patient]):
     result = make_mulitple_prediction(record,patient)
     return result
 
-@app.get("/patient/search/{firstname}&{lastname}",response_model=List[Patient_in_db],status_code=200)
+@app.get("/search/patient/{firstname}&{lastname}",response_model=List[Patient_in_db],status_code=200)
 async def get_patient_by_name(firstname:str,lastname:str):
     patients= db.get_patient_by_full_name(firstname,lastname)
     return patients
 
+@app.get("/search/patient/period/{fromdate}&{todate}",response_model=List[Patient_in_db],status_code=200)
+async def get_patients_by_window_period(fromdate :str, todate: str) -> List[Patient]:
+    from_to_dict =dict()
+    from_to_dict["from_year"]=fromdate.split("-")[0]
+    from_to_dict["from_month"]=fromdate.split("-")[1]
+    from_to_dict["from_day"]=fromdate.split("-")[2]
+    from_to_dict["to_year"]=todate.split("-")[0]
+    from_to_dict["to_month"]=todate.split("-")[1]
+    from_to_dict["to_day"]=todate.split("-")[2]
+    patients= db.get_patients_by_window_period(from_to_dict)
+    return patients
 
-@app.get("/patient/{patient_id}")
-async def get_patient_by_id(item_id: int):
-    pass
-    
+@app.get("/search/file/{filename}&{createdon}",response_model=List[Patient_in_db],status_code=200)
+async def get_patient_by_name(filename:str,createdon:str):
+    year =createdon.split("-")[0]
+    month=createdon.split("-")[1]
+    day =createdon.split("-")[2]
+    patients= db.get_patients_file_by_date(filename,year,month,day)
+    return patients
+
+
