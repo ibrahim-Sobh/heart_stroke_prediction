@@ -182,7 +182,7 @@ def validate_search_input_details():
             st.warning("First Name or Last Name is required to Search!")
             return False
     elif option=='Window Period':
-        if search_patient_from_date < search_patient_from_date:
+        if search_patient_from_date > search_patient_to_date:
             st.warning("Window Period is required (From Date strictly greater than To Date) to Search!")
             return False
     elif option=='Per file':
