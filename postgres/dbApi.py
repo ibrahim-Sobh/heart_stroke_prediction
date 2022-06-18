@@ -1,4 +1,5 @@
 from database import SessionLocal
+from sqlalchemy import or_,and_
 from models import Patient, Record
 from typing import List
 
@@ -51,3 +52,33 @@ def insert_patients(list_of_patients: List[Patient]) -> int:
     DB.add_all(list_of_patients)
     DB.commit()
     return list_of_patients 
+
+def get_patient_by_full_name(first_name: str, last_name: str) -> List[Patient]:
+    """_summary_
+    Get a patient from the patients table
+
+    Args:
+        first_name (str): _description_
+        last_name (str): _description_
+
+    Returns:
+        models.Patient: _description_
+    """
+    return DB.query(Patient).filter(and_(Patient.firstname.ilike("%"+first_name+"%"),
+                                        Patient.lastname.ilike("%"+last_name+"%"))).all()
+    
+def  get_patient_by_date (filename:str, date: str) -> Patient:
+    """_summary_
+    Get a patient from the patients table
+
+    Args:
+        filename (str): _description_
+        date (str): _description_
+
+    Returns:
+        models.Patient: _description_
+    """
+    q = DB.query(Patient).outerjoin(Record).filter(Record.id == Patient.record_id,
+                                                   Record.file_name == filename).filter(Record.createdon == date)
+  
+   

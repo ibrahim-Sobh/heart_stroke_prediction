@@ -9,6 +9,7 @@ from stroke_prediction.inference import make_prediction
 
 #FastAPI
 from fastapi import FastAPI
+from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from typing import Optional
 from json import dumps
@@ -45,10 +46,7 @@ class Patient(BaseModel):
         
 class Patient_in_db(Patient):
     record_id :int
-    prediciton: int
-    class Config:
-        # Serialize our sql into json 
-        orm_mode= True 
+    prediction: int
         
 class Record(BaseModel):
     id: Optional[int] = 0
@@ -72,7 +70,7 @@ def save_patient_record(record:Record,patient:Patient,result)->int:
     )
     
     record_id_in_db = db.create_record(new_record)
-    patient_in_db = Patient_in_db(**patient.dict(), record_id=record_id_in_db,prediciton= result)
+    patient_in_db = Patient_in_db(**patient.dict(), record_id=record_id_in_db,prediction= result)
     new_patient =models.Patient(
         record_id=patient_in_db.record_id,
         firstname=patient_in_db.firstname,
@@ -87,12 +85,12 @@ def save_patient_record(record:Record,patient:Patient,result)->int:
         avg_glucose_level=patient_in_db.avg_glucose_level,
         bmi=patient_in_db.bmi,
         smoking_status=patient_in_db.smoking_status,
-        prediciton = patient_in_db.prediciton
+        prediction = patient_in_db.prediction
         )
     result=db.insert_patient(new_patient)
     return result
 
-def save_list_patients_record(record:Record,patients,prediciton_results)->int:
+def save_list_patients_record(record:Record,patients,prediction_results)->int:
    
     new_record = models.Record(
           file_name=record.file_name,
@@ -104,7 +102,7 @@ def save_list_patients_record(record:Record,patients,prediciton_results)->int:
     record_id_in_db = db.create_record(new_record)
     
     list_of_patients=[]
-    for patient ,result  in zip(patients,prediciton_results):
+    for patient ,result  in zip(patients,prediction_results):
         new_patient =models.Patient(
             record_id=record_id_in_db,
             firstname=patient.firstname,
@@ -119,7 +117,7 @@ def save_list_patients_record(record:Record,patients,prediciton_results)->int:
             avg_glucose_level=patient.avg_glucose_level,
             bmi=patient.bmi,
             smoking_status=patient.smoking_status,
-            prediciton =result
+            prediction =result
             )
         list_of_patients.append(new_patient)
     result=db.insert_patients(list_of_patients)
@@ -127,22 +125,22 @@ def save_list_patients_record(record:Record,patients,prediciton_results)->int:
 
 
 # ML Calls
-def make_one_predicition(record:Record,patient: Patient)->dict:
+def make_one_prediction(record:Record,patient: Patient)->dict:
     pd_dict = patient.dict()
-    prediciton_df= pd.DataFrame.from_dict([pd_dict])
-    prediciton_df.drop(['firstname','lastname'], axis = 1,inplace=True)
-    prediction=int(make_prediction(prediciton_df)[0])
+    prediction_df= pd.DataFrame.from_dict([pd_dict])
+    prediction_df.drop(['firstname','lastname'], axis = 1,inplace=True)
+    prediction=int(make_prediction(prediction_df)[0])
     save_patient_record(record,patient,prediction)
     return {"prediction": prediction}
 
-def make_mulitple_predicition(record:Record,patients: List[Patient]):
+def make_mulitple_prediction(record:Record,patients: List[Patient]):
     records= [dict(patients[patienindex]) for patienindex in range(len(patients))]
-    prediciton_df= pd.DataFrame.from_records(records)
-    prediciton_df.drop(['firstname','lastname'], axis = 1,inplace=True)
-    prediciton_df["predicition"]=make_prediction(prediciton_df)
-    results = list(prediciton_df["predicition"])
+    prediction_df= pd.DataFrame.from_records(records)
+    prediction_df.drop(['firstname','lastname'], axis = 1,inplace=True)
+    prediction_df["prediction"]=make_prediction(prediction_df)
+    results = list(prediction_df["prediction"])
     save_list_patients_record(record,patients,results)
-    return dumps(prediciton_df.to_dict('index'))
+    return dumps(prediction_df.to_dict('index'))
     
 @app.get("/")
 def read_root():
@@ -150,19 +148,20 @@ def read_root():
 
 @app.get("/predcit")
 async def predict(record:Record,patient: Patient):
-    result= make_one_predicition(record,patient)
+    result= make_one_prediction(record,patient)
     return result
 
 @app.get("/predcit_multiple")
 async def predict_file(record:Record,patient: List[Patient]):
     print(record)
-    result = make_mulitple_predicition(record,patient)
+    result = make_mulitple_prediction(record,patient)
     return result
 
-@app.get("/patients",response_model=List[Patient],status_code=200)
-async def get_all_patients():
-    patients= db.query(models.Patient).all() # as json 
+@app.get("/patient/search/{firstname}&{lastname}",response_model=List[Patient_in_db],status_code=200)
+async def get_patient_by_name(firstname:str,lastname:str):
+    patients= db.get_patient_by_full_name(firstname,lastname)
     return patients
+
 
 @app.get("/patient/{patient_id}")
 async def get_patient_by_id(item_id: int):
