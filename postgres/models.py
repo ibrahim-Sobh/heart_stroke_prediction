@@ -22,7 +22,7 @@ class Patient(Base):
     avg_glucose_level=Column(Float,nullable=False)
     bmi= Column(Float,nullable=False)
     smoking_status= Column(String(35),nullable=False)
-    prediciton =Column(Boolean, default=False)
+    prediction =Column(Boolean, default=False)
     records =relationship('Record')
     
 class Record(Base):
