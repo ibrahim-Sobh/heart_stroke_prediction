@@ -66,7 +66,7 @@ def get_patient_by_full_name(first_name: str, last_name: str) -> List[Patient]:
     Returns:
         models.Patient: _description_
     """
-    return DB.query(Patient).outerjoin(Record).filter(Record.file_name== "N/A",
+    return DB.query(Patient).outerjoin(Record).filter(Record.file_name== "-",
                                                       and_(Patient.firstname.ilike("%"+first_name+"%"),
                                                            Patient.lastname.ilike("%"+last_name+"%"))).all()
         
@@ -79,7 +79,8 @@ def get_patients_by_window_period(filter :dict) -> List[Patient]:
     Returns:
         List[Patient]: _description_
     """
-    return DB.query(Patient).outerjoin(Record).filter(Record.file_name== "N/A", extract('year', Record.createdon).between(filter["from_year"],(filter["to_year"])),
+    return DB.query(Patient).outerjoin(Record).filter(Record.file_name== "-",
+                                                        extract('year', Record.createdon).between(filter["from_year"],(filter["to_year"])),
                                                         extract('month', Record.createdon).between(filter["from_month"],(filter["to_month"])),
                                                         extract('day', Record.createdon).between(filter["from_day"],(filter["to_day"])),).all()
        
@@ -95,7 +96,8 @@ def get_patients_file_by_date (filename:str, year: int, month:int, day :int) -> 
     Returns:
         models.Patient: _description_
     """
-    file_header =DB.query(Record).filter(Record.file_name.ilike("%"+filename+"%"),Record.doctor_first_name== "N/A",Record.doctor_last_name== "N/A",
+    file_header =DB.query(Record).filter(Record.file_name.ilike("%"+filename+"%",),
+                                         Record.doctor_first_name== "N/A",Record.doctor_last_name== "N/A",
                                                       extract('year', Record.createdon) == year,
                                                         extract('month', Record.createdon) == month,
                                                         extract('day', Record.createdon)==day).first()

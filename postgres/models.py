@@ -32,3 +32,24 @@ class Record(Base):
     doctor_first_name=Column(Text,nullable=True)
     doctor_last_name=Column(Text,nullable=True)
     createdon=  Column(DateTime(timezone=True), server_default=func.now())
+
+
+
+class Data_ingested(Base):
+    __tablename__ ='data_ingested'
+    id = Column(Integer, primary_key=True,autoincrement=True, nullable=True)
+    firstname = Column(String(35), nullable=True)
+    lastname = Column(String(35), nullable=True)
+    gender = Column(String(8), nullable=True)
+    age = Column(Float, nullable=True)
+    hypertension = Column(Boolean, default=True)
+    heart_disease = Column(Boolean, default=True)
+    ever_married = Column(String(35), nullable=True)
+    work_type =  Column(String(35), nullable=True)
+    Residence_type =  Column(String(35), nullable=True)
+    avg_glucose_level = Column(Float, nullable=True)
+    bmi = Column(Float, nullable=True)
+    smoking_status = Column(String(35), nullable=True)
+    prediction = Column(Boolean, default=True)
+    quality = Column(Boolean, default=True)
+    datetime = Column(DateTime(timezone=True), server_default=func.now())
