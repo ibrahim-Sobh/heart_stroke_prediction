@@ -1,0 +1,5 @@
+id,firstname,lastname,gender,age,hypertension,heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status
+54756,Clara,Curry,Female,59.0,0,0,Yes,Private,Rural,57.47,30.1,formerly smoked
+2265,Glenn,Luna,Male,49.0,0,0,Yes,Private,Rural,79.64,,smokes
+14036,Lola,Cunningham,Male,44.0,0,0,Yes,Private,Rural,101.46,29.4,Unknown
+56233,Jesse,Leonard,Female,44.0,0,0,No,Private,Rural,116.95,26.1,never smoked

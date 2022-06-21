@@ -1,0 +1,100 @@
+id,firstname,lastname,gender,age,hypertension,heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status
+13529,Luis,Stevens,Female,36.0,0,0,Yes,Govt_job,Rural,129.43,29.7,never smoked
+10651,Cole,Waters,Male,54.0,1,0,Yes,Govt_job,Rural,100.12,32.3,formerly smoked
+65712,Alice,Schwartz,Male,19.0,0,0,No,Private,Urban,73.33,23.0,never smoked
+30402,Jeffery,Cooper,Male,41.0,0,0,Yes,Private,Urban,104.34,30.3,Unknown
+2454,Jay,Higgins,Male,4.0,0,0,No,children,Rural,89.11,20.1,Unknown
+14976,Andrew,Gomez,Male,80.0,0,1,Yes,Private,Rural,82.41,26.3,smokes
+18752,Cornelia,Chandler,Male,60.0,0,0,Yes,Private,Rural,87.86,29.0,formerly smoked
+67078,Henrietta,Woods,Female,36.0,1,0,Yes,Private,Urban,91.56,42.2,never smoked
+20425,Harvey,Armstrong,Male,43.0,0,0,Yes,Self-employed,Rural,99.15,30.5,formerly smoked
+49509,Kate,Lamb,Female,25.0,0,0,Yes,Private,Rural,78.5,28.6,never smoked
+11727,Andrew,Chambers,Male,39.0,0,0,Yes,Self-employed,Urban,74.29,29.3,smokes
+27480,Clifford,Jones,Male,19.0,0,0,No,Private,Rural,86.19,26.2,never smoked
+70678,Edward,Barnes,Female,55.0,0,1,No,Private,Rural,109.69,22.2,smokes
+53279,Glenn,Franklin,Male,0.24,0,0,No,children,Rural,118.87,16.3,Unknown
+22870,Dale,Reid,Male,12.0,0,0,No,children,Urban,76.26,20.5,never smoked
+54383,Ella,Maxwell,Male,60.0,0,0,Yes,Private,Rural,101.34,32.8,never smoked
+20740,Charlie,Hansen,Female,50.0,0,0,Yes,Self-employed,Rural,84.88,27.1,never smoked
+26594,Dorothy,Frazier,Female,32.0,0,0,Yes,Private,Urban,92.75,34.5,smokes
+54946,Evan,Underwood,Female,26.0,0,0,No,Private,Urban,168.15,22.9,never smoked
+40353,Belle,Reid,Female,61.0,0,0,Yes,Private,Urban,114.09,25.7,never smoked
+14688,Martha,Sutton,Female,44.0,0,0,Yes,Private,Urban,73.87,28.8,smokes
+42999,Lizzie,West,Female,68.0,0,0,Yes,Private,Urban,109.23,31.3,never smoked
+7297,Ida,Sherman,Male,4.0,0,0,No,children,Rural,99.96,15.2,Unknown
+25974,Chester,Gordon,Male,78.0,0,0,Yes,Self-employed,Urban,218.46,26.8,Unknown
+11973,Willie,Pierce,Female,10.0,0,0,No,children,Urban,124.6,18.6,Unknown
+7356,Francis,Mitchell,Male,75.0,0,0,Yes,Private,Urban,104.72,,Unknown
+29613,Caroline,Gross,Female,13.0,0,0,No,Private,Rural,73.76,26.7,Unknown
+36045,Delia,Mann,Female,35.0,0,0,Yes,Private,Rural,119.4,22.9,never smoked
+22778,Bobby,Barker,Male,34.0,0,0,Yes,Private,Urban,66.96,26.1,never smoked
+32352,Mike,Burns,Female,31.0,0,0,Yes,Govt_job,Rural,104.55,26.4,never smoked
+66071,Mable,Salazar,Male,51.0,1,0,Yes,Private,Urban,112.16,42.5,formerly smoked
+64155,Hunter,Keller,Male,60.0,0,0,Yes,Govt_job,Rural,200.25,33.1,never smoked
+19550,Alvin,Bailey,Male,39.0,0,0,Yes,Private,Urban,217.75,39.5,never smoked
+8050,Ruby,Rowe,Male,8.0,0,0,No,children,Urban,84.6,18.4,Unknown
+55709,Olive,Weber,Female,47.0,0,0,Yes,Self-employed,Urban,141.23,21.1,never smoked
+15310,Claudia,Moss,Female,45.0,0,0,Yes,Private,Urban,110.47,24.7,smokes
+15464,Gordon,Cox,Female,71.0,1,1,Yes,Private,Rural,221.24,24.2,Unknown
+63043,Mamie,Bell,Female,27.0,0,0,No,Private,Urban,61.8,26.8,formerly smoked
+20676,Jay,Holmes,Male,29.0,0,0,No,Private,Rural,94.69,28.4,smokes
+11120,Ora,Waters,Female,78.0,1,0,Yes,Private,Urban,218.46,34.3,never smoked
+65944,Lillie,Woods,Female,47.0,0,0,Yes,Self-employed,Urban,105.88,39.9,smokes
+66419,Gene,Jones,Male,25.0,0,0,Yes,Private,Rural,119.96,27.7,never smoked
+68268,Olga,Schneider,Female,63.0,0,0,Yes,Self-employed,Urban,93.88,34.8,Unknown
+46699,Luke,Nguyen,Female,18.0,0,0,No,Private,Rural,78.57,34.4,Unknown
+17277,Isabel,Ellis,Male,4.0,0,0,No,children,Urban,97.51,22.0,Unknown
+30116,Mable,Harvey,Female,57.0,0,0,Yes,Private,Rural,102.28,25.5,never smoked
+49003,Steve,Silva,Male,43.0,0,0,Yes,Private,Urban,146.01,31.5,smokes
+57549,Anthony,Berry,Female,76.0,0,0,Yes,Self-employed,Urban,110.07,31.8,never smoked
+31999,Owen,Parks,Male,51.0,0,1,Yes,Private,Rural,96.06,30.3,Unknown
+2520,Eugenia,Snyder,Female,26.0,0,0,Yes,Private,Rural,84.9,26.2,never smoked
+10886,Sue,Sherman,Female,13.0,0,0,No,children,Rural,99.49,23.4,Unknown
+16938,Francis,Shaw,Female,40.0,0,0,Yes,Self-employed,Rural,212.97,49.8,formerly smoked
+247,Cordelia,Berry,Male,31.0,0,0,No,Private,Urban,72.6,31.6,never smoked
+72514,Ian,Green,Male,18.0,0,0,No,Private,Rural,120.58,21.5,never smoked
+3045,Trevor,Boone,Male,68.0,1,0,Yes,Private,Urban,96.06,37.6,never smoked
+21077,Iva,Franklin,Male,60.0,0,0,Yes,Private,Rural,80.98,29.7,formerly smoked
+60973,Johnny,Sanders,Male,51.0,0,0,Yes,Private,Urban,66.11,26.3,never smoked
+51512,Carlos,Perkins,Female,19.0,0,0,No,Private,Rural,57.4,22.9,Unknown
+57210,Willie,Maxwell,Female,28.0,0,0,Yes,Private,Rural,131.8,30.3,never smoked
+68631,Glen,Cunningham,Female,50.0,0,0,Yes,Private,Rural,62.32,21.6,Unknown
+1405,Abbie,Spencer,Male,1.88,0,0,No,children,Urban,111.65,16.3,Unknown
+34336,Rebecca,Olson,Male,50.0,1,0,Yes,Govt_job,Rural,79.73,25.5,smokes
+58202,Kyle,Silva,Female,50.0,1,0,Yes,Self-employed,Rural,167.41,30.9,never smoked
+18180,Clifford,Moody,Female,3.0,0,0,No,children,Urban,66.25,15.8,Unknown
+16817,Edgar,James,Female,78.0,1,0,No,Private,Urban,130.54,20.1,never smoked
+47306,Chris,Watkins,Male,58.0,0,0,No,Private,Rural,92.62,32.0,Unknown
+11709,Sam,Young,Male,71.0,0,0,No,Private,Urban,95.08,31.5,never smoked
+9201,Carrie,Buchanan,Female,44.0,0,0,Yes,Self-employed,Urban,114.94,21.4,never smoked
+18263,Billy,Barnes,Female,78.0,0,0,Yes,Self-employed,Urban,234.06,33.7,never smoked
+5046,Edith,Page,Male,17.0,0,0,No,Self-employed,Urban,98.42,23.4,Unknown
+44192,Clyde,Adams,Female,11.0,0,0,No,children,Urban,130.15,17.2,Unknown
+34133,Clyde,Sparks,Female,20.0,0,0,No,Private,Rural,93.74,23.7,Unknown
+36698,Danny,Maldonado,Female,33.0,0,0,Yes,Private,Urban,89.98,18.7,smokes
+36858,Leo,Francis,Female,40.0,0,0,Yes,Private,Rural,72.76,24.0,formerly smoked
+65988,Arthur,Weber,Female,26.0,0,0,No,Private,Rural,191.78,24.7,Unknown
+9076,Cameron,Roberson,Male,42.0,0,0,Yes,Self-employed,Urban,86.07,27.3,Unknown
+42460,Lester,Richards,Male,48.0,0,0,Yes,Self-employed,Rural,216.88,,smokes
+36162,Francisco,Page,Male,39.0,1,0,Yes,Private,Rural,111.24,38.8,never smoked
+39977,May,Todd,Female,22.0,0,0,No,Private,Urban,87.4,34.8,never smoked
+55927,Lee,Foster,Female,80.0,1,0,Yes,Private,Rural,74.9,22.2,never smoked
+68657,John,Mason,Female,1.48,0,0,No,children,Urban,61.53,20.5,Unknown
+46923,Francis,Mann,Male,64.0,0,1,Yes,Private,Rural,82.89,29.5,never smoked
+44503,Cora,Rios,Female,25.0,0,0,No,Private,Rural,65.95,35.0,never smoked
+43590,Jeff,Kelly,Female,26.0,0,0,Yes,Private,Rural,63.94,17.6,never smoked
+25095,Bryan,Greene,Male,44.0,0,0,Yes,Govt_job,Urban,94.76,26.0,formerly smoked
+3494,Bryan,Jefferson,Female,80.0,0,0,Yes,Private,Rural,102.9,26.7,Unknown
+491,Lula,McCoy,Female,74.0,0,0,Yes,Self-employed,Urban,74.96,26.6,never smoked
+38349,Nicholas,Ward,Female,49.0,0,0,Yes,Govt_job,Urban,69.92,47.6,never smoked
+42393,Joe,Fernandez,Male,14.0,0,0,No,children,Rural,142.38,17.6,never smoked
+13723,Terry,Weber,Female,65.0,0,0,Yes,Private,Urban,82.26,19.8,formerly smoked
+29326,Charlie,Morrison,Female,75.0,0,0,Yes,Self-employed,Rural,70.22,24.8,formerly smoked
+8521,Jonathan,Ellis,Male,71.0,0,0,Yes,Private,Rural,227.91,31.6,formerly smoked
+711,Joe,Larson,Male,81.0,0,0,Yes,Private,Rural,92.96,22.2,never smoked
+65955,Bertie,Simon,Male,81.0,1,1,No,Private,Rural,220.64,30.0,never smoked
+16556,Agnes,Alvarez,Male,13.0,0,0,No,Never_worked,Rural,111.48,20.8,Unknown
+61672,Gerald,Reynolds,Female,11.0,0,0,No,children,Urban,69.68,14.4,Unknown
+47937,Julia,Strickland,Female,57.0,0,0,Yes,Self-employed,Rural,78.14,35.8,never smoked
+37726,Lucas,Reynolds,Female,80.0,1,0,Yes,Self-employed,Urban,68.56,26.2,Unknown
+50775,Mitchell,Simpson,Male,46.0,0,0,No,Private,Urban,124.61,37.4,Unknown
