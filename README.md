@@ -46,7 +46,7 @@ BACKEND_SERVER =[Server]
 5. Run Python createdb.py to create the tables & relationships in your database
 
 ## Airflow ( Follow the steps in Repo ) :timer_clock:
-[Airflow Repo - README.md](https://github.com/Isaacgv/stroke_prediction_airflow#readme)<br>
+[Airflow Repo - README.md](https://github.com/ibrahim-Sobh/heart_stroke_airflow#readme)<br>
 [Link to Airflow](http://34.135.123.223:8052/)</br>
 ## Grafana ( Follow the steps in Repo ) :cyclone:
 [Grafana Repo - README.md](https://github.com/ibrahim-Sobh/heart_stroke_grafana#readme)<br>
