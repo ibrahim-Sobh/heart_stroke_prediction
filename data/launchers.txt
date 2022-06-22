@@ -10,3 +10,13 @@ streamlit run web_interface.py --server.port 8010;
 
 # Flake8 / auto pep
 # for f in `find . -name "*.py"`; do autopep8 --in-place --select=000 $f; done
+
+
+#Website
+http://35.238.16.200:8501/
+
+#grafana
+https://grafa-stroke.herokuapp.com/d/LDFHt43nk/feature-monitoring?orgId=1
+
+# Airflow
+http://34.135.123.223:8052/

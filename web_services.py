@@ -5,7 +5,7 @@ from datetime import date
 import requests
 
 # Interact with FastAPI endpoint
-import config
+import load_config as config
 BACKEND_SERVER = config.get_backend_connection_server()
 
 # Make Predictions Section
