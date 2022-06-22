@@ -49,7 +49,7 @@ BACKEND_SERVER =[Server]
 [Airflow Repo - README.md](https://github.com/Isaacgv/stroke_prediction_airflow#readme)<br>
 [Link to Airflow](http://34.135.123.223:8052/)</br>
 ## Grafana ( Follow the steps in Repo ) :cyclone:
-[Grafana Repo - README.md](https://github.com/Patrick844/grafana-heroku#readme)<br>
+[Grafana Repo - README.md](https://github.com/ibrahim-Sobh/heart_stroke_grafana#readme)<br>
 [Link to Grafana](https://grafa-stroke.herokuapp.com/d/LDFHt43nk/feature-monitoring?orgId=1)</br>
 
 ## Heroku  Streamlit 
